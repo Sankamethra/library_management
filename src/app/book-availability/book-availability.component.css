@@ -1,0 +1,21 @@
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .book {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+  }
+  
+  .available {
+    color: green;
+  }
+  
+  .unavailable {
+    color: red;
+  }
+  

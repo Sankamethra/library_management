@@ -1,0 +1,159 @@
+<ul>
+  <li><a class="active" [routerLink]="['/home']">Home</a></li>
+  <li><a [routerLink]="['/book-list']">BookList</a></li>
+  <li><a [routerLink]="['/search']" >Search</a></li>
+  <li><a [routerLink]="['/book-availability']">Availability</a></li>
+  <li><a [routerLink]="['/cart']">Cart</a></li>
+  <li><a class="login" [routerLink]="['/login']">Login</a></li>
+  <li><a [routerLink]="['/register']">Signup</a></li>
+</ul>
+<h1>List of Books that we have</h1>
+<div class="book-list">
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image" src="../assets/img/books/book7.jpg">
+    <h2>Title 1 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <p>price: {{book.price}}</p>
+    <br>
+    <button class="button" (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image"src="../assets/img/books/book8.jpg">
+    <h2>Title 2 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <br>
+    <button class="button" (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image" src="../assets/img/books/book1.jpg">
+    <h2>Title 3 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <br>
+    <button class="button" (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image" src="../assets/img/books/book1.jpg">
+   <h2>Title 4 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <br>
+    <button class="button" (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image" src="../assets/img/books/book5.jpg">
+    <h2>Title 5 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <br>
+    <button class="button" (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image" src="../assets/img/books/book6.jpg">
+    <h2>Title 6 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <br>
+    <button class="button" (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image" src="../assets/img/books/book7.jpg">
+    <h2>Title 7 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <br>
+    <button class="button" (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image" src="../assets/img/books/book1.jpg">
+    <h2>Title 7 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <br>
+    <button class="button" (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image" src="../assets/img/books/book1.jpg">
+    <h2>Title 8 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <br>
+    <button class="button" (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image" src="../assets/img/books/book1.jpg">
+    <h2>Title 9 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <br>
+    <button class="button"  (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image" src="../assets/img/books/book1.jpg">
+    <h2>Title 10 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <br>
+    <button class="button" (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+  <div  *ngFor="let book of books" class="book-item">
+    <img class="image" src="../assets/img/books/book1.jpg">
+    <h2>Title 11 : {{ book.title }} </h2>
+    <p>Author: {{book.author}} </p>
+    <p>Genre: {{book.genre}} </p>
+    <p>Year of Publishing: {{book.year}} </p>
+    <p>Availability: {{ book.availability }}</p>
+    <br>
+    <button class="button" (click)="addToCart(book)" >Add to Cart</button>
+    <p>Quantity in Cart: {{ getQuantityInCart(book) }}</p>
+  </div>
+
+
+
+  

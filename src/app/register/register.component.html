@@ -1,0 +1,50 @@
+<div class="register-container">
+    <h2>Register</h2>
+    <form class="register-form" (ngSubmit)="register(RegisterForm)" #RegisterForm="ngForm">
+        <div>
+            <label for="name">Name</label>
+            <input type="name" id="name" name="name" required name [(ngModel)]="name" #nameInput="ngModel">
+            <div *ngIf="nameInput.invalid && (nameInput.dirty || nameInput.touched)">
+              <div class="error-message" *ngIf="nameInput.errors?.['required']">Name is required.</div>
+              <div class="error-message" *ngIf="nameInput.errors?.['name']">Invalid name format.</div>
+            </div>
+          </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required email [(ngModel)]="email" #emailInput="ngModel">
+        <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+          <div class="error-message" *ngIf="emailInput.errors?.['required']">Email is required.</div>
+          <div class="error-message" *ngIf="emailInput.errors?.['email']">Invalid email format.</div>
+        </div>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required minlength="6" [(ngModel)]="password" #passwordInput="ngModel">
+        <div *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">
+          <div class="error-message" *ngIf="passwordInput.errors?.['required']">Password is required.</div>
+          <div class="error-message" *ngIf="passwordInput.errors?.['minlength']">Password should be at least 6 characters long.</div>
+        </div>
+      </div>
+
+      <div>
+        <label for="mobile">Mobile</label>
+        <input type="tel" id="mobile" name="mobile" required minlength="10" [(ngModel)]="mobile" #mobileInput="ngModel">
+        <div *ngIf="mobileInput.invalid && (mobileInput.dirty || mobileInput.touched)">
+          <div class="error-message" *ngIf="mobileInput.errors?.['required']">Mobile number is required.</div>
+          <div class="error-message" *ngIf="mobileInput.errors?.['minlength']">Number should be 10.</div>
+        </div>
+      </div>
+    
+      <button type="submit" [routerLink]="['/login']">Register</button><br><br>
+        <!-- Sign up with Google -->
+  <button type="button" class="btn btn-google" (click)="signupWithGoogle()">
+    Sign up with Google
+  </button>
+<br><br>
+  <!-- Sign up with Facebook -->
+  <button type="button" class="btn btn-facebook" (click)="signupWithFacebook()">
+    Sign up with Facebook
+  </button>
+    </form>
+  </div>
+  
